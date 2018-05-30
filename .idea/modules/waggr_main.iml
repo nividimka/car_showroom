@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id="waggr:main" external.linked.project.path="$MODULE_DIR$/../.." external.root.project.path="$MODULE_DIR$/../.." external.system.id="GRADLE" external.system.module.group="" external.system.module.type="sourceSet" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
+    <output url="file://$MODULE_DIR$/../../out/production/classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../src/main">
+      <sourceFolder url="file://$MODULE_DIR$/../../src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../src/main/res" type="java-resource" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Gradle: org.apache.clerezza.ext:org.json.simple:0.4" level="project" />
+    <orderEntry type="library" name="Gradle: junit:junit:4.12" level="project" />
+    <orderEntry type="library" name="Gradle: javax.xml.parsers:jaxp-api:1.4.5" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.common:google-collect:1.0-rc1" level="project" />
+    <orderEntry type="library" name="Gradle: joda-time:joda-time:2.9.9" level="project" />
+    <orderEntry type="library" name="Gradle: mysql:mysql-connector-java:6.0.6" level="project" />
+    <orderEntry type="library" name="Gradle: net.sourceforge.jdatepicker:jdatepicker:1.3.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.easytesting:fest-swing:1.2.1" level="project" />
+    <orderEntry type="library" name="Gradle: com.intellij:forms_rt:7.0.3" level="project" />
+    <orderEntry type="library" name="Gradle: com.googlecode.json-simple:json-simple:1.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.hamcrest:hamcrest-core:1.3" level="project" />
+    <orderEntry type="library" name="Gradle: org.easytesting:fest-assert:1.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.easytesting:fest-reflect:1.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.easytesting:fest-util:1.1.3" level="project" />
+    <orderEntry type="library" name="Gradle: net.jcip:jcip-annotations:1.0" level="project" />
+    <orderEntry type="library" name="Gradle: asm:asm-commons:3.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.jgoodies:forms:1.1-preview" level="project" />
+    <orderEntry type="library" name="Gradle: jdom:jdom:1.0" level="project" />
+    <orderEntry type="library" name="Gradle: asm:asm-tree:3.0" level="project" />
+    <orderEntry type="library" name="Gradle: asm:asm:3.0" level="project" />
+  </component>
+</module>

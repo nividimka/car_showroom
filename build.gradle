@@ -1,0 +1,62 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+//… other stuff, you typically find in a Gradle build file
+
+compileJava.options.encoding = "UTF-8"
+sourceSets {
+    main {
+        java{
+            srcDirs = ["src/main/java/"]
+        }
+        resources {
+            srcDirs = ["src/main/res"]
+        }
+    }
+//    test.java.srcDirs += 'src/test/java/'
+//    test.java.srcDirs += 'src/applicationTest/java/'
+}
+
+buildscript {
+    //...
+}
+repositories {
+    maven {
+        url 'http://dist.wso2.org/maven2/'
+    }
+
+    maven { url "https://mini2dx.org/maven/content/repositories/thirdparty" }
+    maven { url "https://mini2dx.org/maven/content/repositories/releases" }
+    mavenLocal()
+    mavenCentral()
+}
+dependencies {
+    compile group: 'org.apache.clerezza.ext', name: 'org.json.simple', version: '0.4'
+    compile 'junit:junit:4.12'
+    // https://mvnrepository.com/artifact/javax.xml.parsers/jaxp-api
+    compile group: 'javax.xml.parsers', name: 'jaxp-api', version: '1.4.5'
+// https://mvnrepository.com/artifact/com.google.common/google-collect
+    compile group: 'com.google.common', name: 'google-collect', version: '1.0-rc1'
+// https://mvnrepository.com/artifact/joda-time/joda-time
+    compile group: 'joda-time', name: 'joda-time', version: '2.9.9'
+// https://mvnrepository.com/artifact/mysql/mysql-connector-java
+    compile group: 'mysql', name: 'mysql-connector-java', version: '6.0.6'
+    // https://mvnrepository.com/artifact/net.sourceforge.jdatepicker/jdatepicker
+    compile group: 'net.sourceforge.jdatepicker', name: 'jdatepicker', version: '1.3.2'
+    // https://mvnrepository.com/artifact/org.easytesting/fest-swing
+    compile group: 'org.easytesting', name: 'fest-swing', version: '1.2.1'
+    // https://mvnrepository.com/artifact/com.intellij/forms_rt
+    compile group: 'com.intellij', name: 'forms_rt', version: '7.0.3'
+
+}
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.example.Main'
+    }
+
+    // This line of code recursively collects and copies all of a project's files
+    // and adds them to the JAR itself. One can extend this task, to skip certain
+    // files or particular types at will
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+}
+mainClassName = 'Main'

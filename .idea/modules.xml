@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Waggr.iml" filepath="$PROJECT_DIR$/Waggr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/waggr.iml" filepath="$PROJECT_DIR$/.idea/modules/waggr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/waggr_main.iml" filepath="$PROJECT_DIR$/.idea/modules/waggr_main.iml" group="waggr" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/waggr_test.iml" filepath="$PROJECT_DIR$/.idea/modules/waggr_test.iml" group="waggr" />
     </modules>
   </component>
 </project>
-

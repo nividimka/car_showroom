@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.common:google-collect:1.0-rc1">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/Could not find com.google.common:google-collect:1.0-rc1." />
+      <root url="jar://C:/gradle-3.4.1/caches/modules-2/files-2.1/com.google.common/google-collect/1.0-rc1/dc3176d070dd5c9671fa486836d3104108019e94/google-collect-1.0-rc1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
