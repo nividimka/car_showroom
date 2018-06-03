@@ -113,16 +113,9 @@ public class MainForm extends JFrame {
     }
 
     private void createUIComponents() {
-        String[] columnNames = {"id", "Название машины", "Дата создания", "Категория", "Номер машины", "Производитель", "Стоимость руб/ч", "Редактировать", "Удалить"};
-        Object[][] data = carService.getCarTableObjects();
-        TableModel model = new DefaultTableModel(data, columnNames) {
-            private static final long serialVersionUID = 1L;
-
-            public boolean isCellEditable(int row, int column) {
-                return column == 7 || column == 8;
-            }
-        };
-        autoTable = new JTable(model);
+        String[] columnNames = {"id", "Название машины", "Дата создания", "Категория", "Номер машины", "Производитель", "Стоимость руб/ч"};
+        Drawable drawable = new BorderlessTableDecorator(new BlueHeaderTableDecorator(new DeleteDecorator(new EditDecorator(new TableDrawable(carService.getCarTableObjects(), columnNames)))));
+        autoTable = drawable.getTable();
         autoTable.getColumnModel().getColumn(7).setCellRenderer(new ClientsTableButtonRenderer());
         autoTable.getColumnModel().getColumn(7).setCellEditor(new ClientsTableRenderer(new JCheckBox(), (id, row) -> {
             EditAutoDialog dialog = new EditAutoDialog(id);
@@ -145,15 +138,16 @@ public class MainForm extends JFrame {
             }
         }));
         String[] orderColumnNames = {"id", "Название машины", "Имя пользователя", "Дата начала проката", "Дата окончания проката"};
-        Object[][] orderData = orderService.getOrderTableObjects();
-        TableModel orderModel = new DefaultTableModel(orderData, orderColumnNames) {
-            private static final long serialVersionUID = 1L;
+        Drawable orderDrawable = new TableDrawable(orderService.getOrderTableObjects(), orderColumnNames);
+        orderTable = orderDrawable.getTable();
+    }
 
-            public boolean isCellEditable(int row, int column) {
-                return false;
-            }
-        };
-        orderTable = new JTable(orderModel);
+    private void editOrder(long id) {
+        System.out.println("EDIT");
+    }
+
+    private void deleteOrder(long id) {
+        System.out.println("DELETE");
     }
 
     /**

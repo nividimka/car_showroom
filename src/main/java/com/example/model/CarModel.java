@@ -426,7 +426,7 @@ public class CarModel extends BaseModel {
                 this.getCarNumber().getName(),
                 this.getManufacturer().getName(),
                 this.getPrice(),
-                "Edit",
+                "Edit1",
                 "Delete"};
     }
 }
